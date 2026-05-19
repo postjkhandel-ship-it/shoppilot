@@ -1,43 +1,56 @@
 export default function Plans() {
+  const plans = [
+    {
+      name: "Starter",
+      price: "199 kr/md",
+      text: "Til nye webshops der vil hurtigt i gang.",
+      features: ["1 webshop", "Op til 25 produkter", "Basis checkout"]
+    },
+    {
+      name: "Pro",
+      price: "399 kr/md",
+      text: "Til webshops der vil vækste.",
+      features: ["3 webshops", "Ubegrænsede produkter", "Analytics", "Custom domæne"]
+    },
+    {
+      name: "Business",
+      price: "799 kr/md",
+      text: "Til større shops og bureauer.",
+      features: ["10 webshops", "Prioriteret support", "Avanceret checkout", "Team adgang"]
+    }
+  ];
+
   return (
     <main style={{ padding: "50px", fontFamily: "Arial" }}>
       <h1>Abonnementer</h1>
-      <p>Vælg hvilken plan kunden skal bruge til sin webshop.</p>
+      <p>Vælg den plan der passer til webshoppen.</p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))", gap: "20px", marginTop: "30px" }}>
-        <div style={card}>
-          <h2>Basic</h2>
-          <h1>199 kr/md</h1>
-          <p>Til nye webshops.</p>
-          <button style={button}>Vælg Basic</button>
-        </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))", gap: "20px", marginTop: "30px" }}>
+        {plans.map((plan) => (
+          <div key={plan.name} style={card}>
+            <h2>{plan.name}</h2>
+            <h1>{plan.price}</h1>
+            <p>{plan.text}</p>
 
-        <div style={card}>
-          <h2>Pro</h2>
-          <h1>399 kr/md</h1>
-          <p>Til webshops der vil vækste.</p>
-          <button style={button}>Vælg Pro</button>
-        </div>
+            <ul>
+              {plan.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
 
-        <div style={card}>
-          <h2>Business</h2>
-          <h1>799 kr/md</h1>
-          <p>Til større webshops.</p>
-          <button style={button}>Vælg Business</button>
-        </div>
+            <button style={button}>Vælg plan</button>
+          </div>
+        ))}
       </div>
-
-      <br />
-      <a href="/dashboard">Tilbage til dashboard</a>
     </main>
   );
 }
 
 const card = {
+  background: "#fff",
   border: "1px solid #ddd",
-  borderRadius: "12px",
-  padding: "20px",
-  background: "#fff"
+  borderRadius: "14px",
+  padding: "24px"
 };
 
 const button = {
