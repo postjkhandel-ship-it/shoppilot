@@ -1,40 +1,40 @@
 export default function Checkout() {
+  const gateways = [
+    { name: "Stripe", text: "Modtag kortbetalinger, Apple Pay og Google Pay.", status: "Ikke forbundet" },
+    { name: "MobilePay", text: "Gør det nemt for danske kunder at betale.", status: "Kommer snart" },
+    { name: "PayPal", text: "Tilbyd PayPal som ekstra betalingsmulighed.", status: "Ikke forbundet" }
+  ];
+
   return (
     <main style={{ padding: "50px", fontFamily: "Arial" }}>
       <h1>Checkout & Betaling</h1>
-      <p>Her kan webshop-ejeren forbinde betalinger.</p>
+      <p>Forbind betalingsløsninger til webshoppen.</p>
 
-      <div style={{ display: "grid", gap: "20px", maxWidth: "700px", marginTop: "30px" }}>
-        <div style={card}>
-          <h2>Stripe</h2>
-          <p>Tag imod kortbetalinger globalt.</p>
-          <button style={button}>Forbind Stripe</button>
-        </div>
+      <div style={{ display: "grid", gap: "20px", marginTop: "30px" }}>
+        {gateways.map((gateway) => (
+          <div key={gateway.name} style={card}>
+            <div>
+              <h2>{gateway.name}</h2>
+              <p>{gateway.text}</p>
+              <p>Status: {gateway.status}</p>
+            </div>
 
-        <div style={card}>
-          <h2>MobilePay</h2>
-          <p>Modtag betalinger via MobilePay.</p>
-          <button style={button}>Forbind MobilePay</button>
-        </div>
-
-        <div style={card}>
-          <h2>PayPal</h2>
-          <p>Aktivér PayPal checkout.</p>
-          <button style={button}>Forbind PayPal</button>
-        </div>
+            <button style={button}>Forbind</button>
+          </div>
+        ))}
       </div>
-
-      <br />
-      <a href="/dashboard">Tilbage til dashboard</a>
     </main>
   );
 }
 
 const card = {
+  background: "#fff",
   border: "1px solid #ddd",
-  borderRadius: "12px",
-  padding: "20px",
-  background: "#fff"
+  borderRadius: "14px",
+  padding: "24px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center"
 };
 
 const button = {
