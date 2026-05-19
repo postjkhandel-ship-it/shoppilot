@@ -1,11 +1,21 @@
 export default function StorePreview() {
+  const products = [
+    { name: "Produkt 1", price: "299 kr" },
+    { name: "Produkt 2", price: "399 kr" },
+    { name: "Produkt 3", price: "499 kr" }
+  ];
+
   return (
     <main style={{ fontFamily: "Arial", background: "#fff", minHeight: "100vh" }}>
-      <section style={{ padding: "60px", background: "#f6f8fb" }}>
-        <h1 style={{ fontSize: "48px" }}>Din Webshop</h1>
-        <p style={{ fontSize: "20px" }}>
-          Her ser kunden, hvordan webshoppen kommer til at se ud.
+      <section style={{ padding: "70px", background: "#f3f4f6" }}>
+        <h1 style={{ fontSize: "54px", maxWidth: "700px" }}>
+          Velkommen til din webshop
+        </h1>
+
+        <p style={{ fontSize: "20px", maxWidth: "600px", color: "#555" }}>
+          Dette er en preview-side, hvor kunden kan se sin webshop før den går live.
         </p>
+
         <button style={button}>Shop nu</button>
       </section>
 
@@ -13,29 +23,15 @@ export default function StorePreview() {
         <h2>Produkter</h2>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))", gap: "20px" }}>
-          <div style={card}>
-            <h3>Produkt 1</h3>
-            <p>299 kr</p>
-            <button style={button}>Køb nu</button>
-          </div>
-
-          <div style={card}>
-            <h3>Produkt 2</h3>
-            <p>399 kr</p>
-            <button style={button}>Køb nu</button>
-          </div>
-
-          <div style={card}>
-            <h3>Produkt 3</h3>
-            <p>499 kr</p>
-            <button style={button}>Køb nu</button>
-          </div>
+          {products.map((product) => (
+            <div key={product.name} style={card}>
+              <div style={imageBox}>Produktbillede</div>
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+              <button style={button}>Køb nu</button>
+            </div>
+          ))}
         </div>
-      </section>
-
-      <section style={{ padding: "50px", background: "#f6f8fb" }}>
-        <h2>Om webshoppen</h2>
-        <p>Professionel webshop bygget med Shoppilot.</p>
       </section>
     </main>
   );
@@ -43,9 +39,19 @@ export default function StorePreview() {
 
 const card = {
   border: "1px solid #ddd",
-  borderRadius: "12px",
+  borderRadius: "14px",
   padding: "20px",
   background: "#fff"
+};
+
+const imageBox = {
+  height: "160px",
+  background: "#f1f5f9",
+  borderRadius: "12px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: "15px"
 };
 
 const button = {
