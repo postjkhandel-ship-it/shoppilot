@@ -5,22 +5,25 @@ export default function RootLayout({ children }) {
         <div style={{ display: "flex", minHeight: "100vh" }}>
           <aside
             style={{
-              width: "240px",
+              width: "250px",
               background: "#111827",
               color: "white",
               padding: "24px",
               position: "fixed",
-              height: "100vh"
+              height: "100vh",
+              overflowY: "auto"
             }}
           >
             <h2>Shoppilot</h2>
 
-            <nav style={{ display: "grid", gap: "14px", marginTop: "30px" }}>
+            <nav style={{ display: "grid", gap: "12px", marginTop: "30px" }}>
               <a style={link} href="/">Forside</a>
               <a style={link} href="/stores">Mine Webshops</a>
               <a style={link} href="/create-store">Opret Webshop</a>
               <a style={link} href="/dashboard">Dashboard</a>
               <a style={link} href="/builder">Builder</a>
+              <a style={link} href="/templates">Templates</a>
+              <a style={link} href="/apps">Apps</a>
               <a style={link} href="/products">Produkter</a>
               <a style={link} href="/orders">Ordrer</a>
               <a style={link} href="/customers">Kunder</a>
@@ -31,7 +34,7 @@ export default function RootLayout({ children }) {
             </nav>
           </aside>
 
-          <main style={{ marginLeft: "240px", width: "100%" }}>
+          <main style={{ marginLeft: "250px", width: "100%" }}>
             {children}
           </main>
         </div>
