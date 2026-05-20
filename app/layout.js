@@ -36,6 +36,8 @@ export default function RootLayout({ children }) {
               <a style={link} href="/apps">Apps</a>
               <a style={link} href="/checkout">Checkout</a>
               <a style={link} href="/plans">Abonnementer</a>
+              <a style={link} href="/notifications">Notifikationer</a>
+              <a style={link} href="/support">Support</a>
               <a style={link} href="/settings">Indstillinger</a>
               <a style={link} href="/store">Webshop Preview</a>
             </nav>
