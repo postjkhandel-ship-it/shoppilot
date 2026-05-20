@@ -1,8 +1,23 @@
 export default function Orders() {
   const orders = [
-    { id: "#1001", customer: "Maria Jensen", amount: "299 kr", status: "Betalt" },
-    { id: "#1002", customer: "Jonas Hansen", amount: "499 kr", status: "Sendt" },
-    { id: "#1003", customer: "Sofie Lund", amount: "199 kr", status: "Ny ordre" }
+    {
+      id: "1001",
+      customer: "Maria Jensen",
+      amount: "299 kr",
+      status: "Betalt"
+    },
+    {
+      id: "1002",
+      customer: "Jonas Hansen",
+      amount: "499 kr",
+      status: "Sendt"
+    },
+    {
+      id: "1003",
+      customer: "Sofie Lund",
+      amount: "199 kr",
+      status: "Ny ordre"
+    }
   ];
 
   return (
@@ -17,15 +32,26 @@ export default function Orders() {
             <th style={cell}>Kunde</th>
             <th style={cell}>Beløb</th>
             <th style={cell}>Status</th>
+            <th style={cell}>Handling</th>
           </tr>
         </thead>
+
         <tbody>
           {orders.map((order) => (
             <tr key={order.id}>
-              <td style={cell}>{order.id}</td>
+              <td style={cell}>#{order.id}</td>
               <td style={cell}>{order.customer}</td>
               <td style={cell}>{order.amount}</td>
               <td style={cell}>{order.status}</td>
+
+              <td style={cell}>
+                <a
+                  href={`/orders/${order.id}`}
+                  style={button}
+                >
+                  Se ordre
+                </a>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -47,4 +73,12 @@ const cell = {
   padding: "16px",
   borderBottom: "1px solid #ddd",
   textAlign: "left"
+};
+
+const button = {
+  background: "#111827",
+  color: "white",
+  textDecoration: "none",
+  padding: "10px 14px",
+  borderRadius: "10px"
 };
