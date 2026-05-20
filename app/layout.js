@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
               <a style={link} href="/plans">Abonnementer</a>
               <a style={link} href="/notifications">Notifikationer</a>
               <a style={link} href="/support">Support</a>
+              <a style={link} href="/team">Team & Roller</a>
               <a style={link} href="/account">Min konto</a>
               <a style={link} href="/settings">Indstillinger</a>
               <a style={link} href="/store">Webshop Preview</a>
