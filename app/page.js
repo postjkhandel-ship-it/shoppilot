@@ -1,212 +1,290 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial", background: "#f6f8fb", color: "#111827" }}>
+    <main style={{ fontFamily: "Arial", background: "#f8fafc", color: "#0f172a" }}>
       <section style={hero}>
-        <div style={badge}>Alt-i-én webshop platform</div>
+        <nav style={nav}>
+          <h2 style={{ margin: 0 }}>Shoppilot</h2>
+          <div style={{ display: "flex", gap: "14px" }}>
+            <a href="/login" style={navLink}>Log ind</a>
+            <a href="/create-store" style={navButton}>Start gratis</a>
+          </div>
+        </nav>
 
-        <h1 style={headline}>
-          Byg, lancér og vækst din webshop — uden kode
-        </h1>
+        <div style={heroGrid}>
+          <div>
+            <div style={badge}>Webshop-platform til moderne virksomheder</div>
 
-        <p style={subtext}>
-          Shoppilot samler webshop-builder, produkter, ordrer, checkout,
-          marketing, AI-værktøjer og analytics i ét professionelt dashboard.
-        </p>
+            <h1 style={headline}>
+              Byg en professionel webshop uden kode
+            </h1>
 
-        <div style={ctaRow}>
-          <a href="/create-store" style={primary}>
-            Start din webshop gratis
-          </a>
-          <a href="/dashboard" style={secondary}>
-            Se platformen
-          </a>
-        </div>
+            <p style={subtext}>
+              Shoppilot samler webshop-builder, produkter, checkout, marketing,
+              AI-værktøjer og analytics i ét enkelt dashboard.
+            </p>
 
-        <div style={trustRow}>
-          <span>✓ Ingen kode</span>
-          <span>✓ AI-værktøjer inkluderet</span>
-          <span>✓ Klar til Stripe & MobilePay</span>
+            <div style={ctaRow}>
+              <a href="/create-store" style={primary}>Start din webshop</a>
+              <a href="/dashboard" style={secondary}>Se demo</a>
+            </div>
+
+            <div style={trustRow}>
+              <span>✓ Ingen teknisk erfaring</span>
+              <span>✓ AI inkluderet</span>
+              <span>✓ Klar til betalinger</span>
+            </div>
+          </div>
+
+          <div style={mockup}>
+            <div style={mockupTop}>Shoppilot Dashboard</div>
+            <div style={statsGrid}>
+              <div style={stat}><strong>38</strong><span>Ordrer</span></div>
+              <div style={stat}><strong>12.450 kr</strong><span>Omsætning</span></div>
+              <div style={stat}><strong>2.8%</strong><span>Konvertering</span></div>
+            </div>
+            <div style={mockCard}>AI anbefaling: Tilføj abandoned cart flow</div>
+            <div style={mockCard}>SEO score: 84/100</div>
+            <div style={mockCard}>Checkout klar til Stripe & MobilePay</div>
+          </div>
         </div>
       </section>
 
       <section style={section}>
-        <h2 style={sectionTitle}>Alt du skal bruge for at sælge online</h2>
+        <h2 style={sectionTitle}>Alt til din webshop samlet ét sted</h2>
+        <p style={sectionText}>
+          Fra første produkt til første ordre — Shoppilot giver dig værktøjerne.
+        </p>
 
         <div style={grid}>
-          <div style={card}>
-            <h3>Webshop Builder</h3>
-            <p>Byg sider, produkter, templates og checkout uden teknisk erfaring.</p>
-          </div>
-
-          <div style={card}>
-            <h3>AI der sparer tid</h3>
-            <p>Generér produkttekster, SEO, emails, ads og creatives automatisk.</p>
-          </div>
-
-          <div style={card}>
-            <h3>Ordre & kundeoverblik</h3>
-            <p>Administrér ordrer, kunder, lager, rabatter og abandoned carts.</p>
-          </div>
+          <div style={card}><h3>Webshop Builder</h3><p>Byg sider, design og templates uden kode.</p></div>
+          <div style={card}><h3>Produkter & Lager</h3><p>Styr varer, lager, kategorier og produktdata.</p></div>
+          <div style={card}><h3>Ordrer & Kunder</h3><p>Få fuldt overblik over salg, kunder og ordrestatus.</p></div>
+          <div style={card}><h3>AI Værktøjer</h3><p>Generér SEO, ads, emails, produkter og creatives.</p></div>
+          <div style={card}><h3>Marketing</h3><p>Rabatkoder, reviews, abandoned carts og kampagner.</p></div>
+          <div style={card}><h3>Analytics</h3><p>Følg omsætning, trafik, performance og vækst.</p></div>
         </div>
       </section>
 
-      <section style={darkSection}>
-        <h2 style={darkTitle}>Fra idé til webshop på få minutter</h2>
-        <p style={darkText}>
-          Perfekt til iværksættere, bureauer og virksomheder der vil starte,
-          teste og skalere webshops hurtigere.
-        </p>
+      <section style={softSection}>
+        <h2 style={sectionTitle}>Fra idé til webshop på få minutter</h2>
 
         <div style={steps}>
-          <div style={step}>1. Opret webshop</div>
-          <div style={step}>2. Tilføj produkter</div>
-          <div style={step}>3. Gå live</div>
+          <div style={step}><strong>1</strong><h3>Opret webshop</h3><p>Vælg navn, niche og template.</p></div>
+          <div style={step}><strong>2</strong><h3>Tilføj produkter</h3><p>Opret produkter manuelt eller med AI.</p></div>
+          <div style={step}><strong>3</strong><h3>Gå live</h3><p>Forbind domæne, betaling og start salg.</p></div>
         </div>
       </section>
 
-      <section style={section}>
-        <h2 style={sectionTitle}>Vælg din plan og kom i gang</h2>
-        <p style={centerText}>
-          Start simpelt — opgradér når din webshop vokser.
+      <section style={finalSection}>
+        <h2 style={finalTitle}>Klar til at bygge din webshop?</h2>
+        <p style={finalText}>
+          Start med Shoppilot og få én samlet platform til at drive din online forretning.
         </p>
-
-        <a href="/plans" style={finalCta}>
-          Se abonnementer
-        </a>
+        <a href="/create-store" style={finalButton}>Start gratis nu</a>
       </section>
     </main>
   );
 }
 
 const hero = {
-  padding: "90px 60px",
-  background: "linear-gradient(135deg, #111827, #1f2937)",
-  color: "white"
+  background: "linear-gradient(135deg, #eef6ff, #f8fafc)",
+  padding: "28px 60px 80px"
+};
+
+const nav = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: "70px"
+};
+
+const navLink = {
+  color: "#0f172a",
+  textDecoration: "none",
+  padding: "12px 16px"
+};
+
+const navButton = {
+  background: "#2563eb",
+  color: "white",
+  padding: "12px 18px",
+  borderRadius: "12px",
+  textDecoration: "none",
+  fontWeight: "bold"
+};
+
+const heroGrid = {
+  display: "grid",
+  gridTemplateColumns: "1.1fr .9fr",
+  gap: "50px",
+  alignItems: "center"
 };
 
 const badge = {
   display: "inline-block",
-  background: "rgba(255,255,255,0.12)",
+  background: "#dbeafe",
+  color: "#1d4ed8",
   padding: "10px 16px",
   borderRadius: "999px",
-  marginBottom: "24px"
+  fontWeight: "bold",
+  marginBottom: "22px"
 };
 
 const headline = {
-  fontSize: "68px",
+  fontSize: "64px",
   lineHeight: "1.05",
-  maxWidth: "980px",
-  margin: "0 0 24px"
+  maxWidth: "850px",
+  margin: "0 0 22px"
 };
 
 const subtext = {
-  fontSize: "22px",
+  fontSize: "21px",
   lineHeight: "1.6",
-  color: "#d1d5db",
-  maxWidth: "780px"
+  color: "#475569",
+  maxWidth: "720px"
 };
 
 const ctaRow = {
   display: "flex",
-  gap: "16px",
-  marginTop: "34px"
+  gap: "14px",
+  marginTop: "30px"
 };
 
 const primary = {
-  background: "white",
-  color: "#111827",
-  padding: "16px 26px",
+  background: "#2563eb",
+  color: "white",
+  padding: "16px 24px",
   borderRadius: "14px",
   textDecoration: "none",
   fontWeight: "bold"
 };
 
 const secondary = {
-  border: "1px solid rgba(255,255,255,.7)",
-  color: "white",
-  padding: "16px 26px",
+  background: "white",
+  color: "#0f172a",
+  border: "1px solid #cbd5e1",
+  padding: "16px 24px",
   borderRadius: "14px",
   textDecoration: "none"
 };
 
 const trustRow = {
   display: "flex",
-  gap: "24px",
-  marginTop: "34px",
-  color: "#e5e7eb",
-  flexWrap: "wrap"
+  gap: "22px",
+  flexWrap: "wrap",
+  marginTop: "28px",
+  color: "#475569"
+};
+
+const mockup = {
+  background: "white",
+  border: "1px solid #dbeafe",
+  borderRadius: "24px",
+  padding: "24px",
+  boxShadow: "0 30px 80px rgba(37,99,235,.15)"
+};
+
+const mockupTop = {
+  fontWeight: "bold",
+  marginBottom: "18px"
+};
+
+const statsGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gap: "12px",
+  marginBottom: "18px"
+};
+
+const stat = {
+  background: "#f8fafc",
+  border: "1px solid #e2e8f0",
+  borderRadius: "14px",
+  padding: "16px",
+  display: "grid",
+  gap: "6px"
+};
+
+const mockCard = {
+  background: "#f8fafc",
+  border: "1px solid #e2e8f0",
+  borderRadius: "14px",
+  padding: "16px",
+  marginTop: "12px"
 };
 
 const section = {
-  padding: "70px 60px",
-  background: "#f6f8fb"
+  padding: "75px 60px",
+  background: "#fff"
 };
 
 const sectionTitle = {
   fontSize: "42px",
   textAlign: "center",
-  marginBottom: "20px"
+  marginBottom: "12px"
+};
+
+const sectionText = {
+  textAlign: "center",
+  color: "#64748b",
+  fontSize: "19px"
 };
 
 const grid = {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))",
-  gap: "22px",
-  marginTop: "35px"
+  gap: "20px",
+  marginTop: "38px"
 };
 
 const card = {
-  background: "white",
-  border: "1px solid #e5e7eb",
+  background: "#ffffff",
+  border: "1px solid #e2e8f0",
   borderRadius: "18px",
   padding: "28px",
-  boxShadow: "0 20px 50px rgba(15,23,42,.06)"
+  boxShadow: "0 18px 45px rgba(15,23,42,.05)"
 };
 
-const darkSection = {
+const softSection = {
   padding: "75px 60px",
-  background: "#111827",
-  color: "white",
-  textAlign: "center"
-};
-
-const darkTitle = {
-  fontSize: "44px",
-  marginBottom: "16px"
-};
-
-const darkText = {
-  fontSize: "20px",
-  color: "#d1d5db",
-  maxWidth: "720px",
-  margin: "0 auto"
+  background: "#eef6ff"
 };
 
 const steps = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))",
-  gap: "18px",
-  marginTop: "38px"
+  gridTemplateColumns: "repeat(auto-fit, minmax(240px,1fr))",
+  gap: "20px",
+  marginTop: "35px"
 };
 
 const step = {
-  background: "rgba(255,255,255,.08)",
-  border: "1px solid rgba(255,255,255,.15)",
-  padding: "22px",
-  borderRadius: "16px"
+  background: "white",
+  border: "1px solid #dbeafe",
+  borderRadius: "18px",
+  padding: "28px"
 };
 
-const centerText = {
-  textAlign: "center",
-  fontSize: "20px",
-  color: "#555"
+const finalSection = {
+  padding: "80px 60px",
+  background: "#0f172a",
+  color: "white",
+  textAlign: "center"
 };
 
-const finalCta = {
-  display: "block",
-  width: "fit-content",
-  margin: "28px auto 0",
-  background: "#111827",
+const finalTitle = {
+  fontSize: "44px",
+  marginBottom: "14px"
+};
+
+const finalText = {
+  color: "#cbd5e1",
+  fontSize: "20px"
+};
+
+const finalButton = {
+  display: "inline-block",
+  marginTop: "28px",
+  background: "#2563eb",
   color: "white",
   padding: "16px 28px",
   borderRadius: "14px",
