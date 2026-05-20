@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
 
             <nav style={{ display: "grid", gap: "10px", marginTop: "30px" }}>
               <a style={link} href="/">Forside</a>
+              <a style={link} href="/admin">Admin Panel</a>
               <a style={link} href="/stores">Mine Webshops</a>
               <a style={link} href="/create-store">Opret Webshop</a>
               <a style={link} href="/dashboard">Dashboard</a>
