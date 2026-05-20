@@ -1,97 +1,96 @@
-export default function RootLayout({ children }) {
+export default function Home() {
   return (
-    <html lang="da">
-      <body style={{ margin: 0, fontFamily: "Arial", background: "#f6f8fb" }}>
-        <div style={{ display: "flex", minHeight: "100vh" }}>
-          <aside
-            style={{
-              width: "280px",
-              background: "#111827",
-              color: "white",
-              padding: "24px",
-              position: "fixed",
-              height: "100vh",
-              overflowY: "auto"
-            }}
-          >
-            <h2>Shoppilot</h2>
+    <main style={{ fontFamily: "Arial", background: "#f6f8fb", minHeight: "100vh" }}>
+      <section style={{ padding: "80px 60px", background: "#111827", color: "white" }}>
+        <h1 style={{ fontSize: "64px", maxWidth: "900px", margin: 0 }}>
+          Byg, driv og skalér din webshop med Shoppilot
+        </h1>
 
-            <nav style={{ display: "grid", gap: "10px", marginTop: "30px" }}>
-              <a style={link} href="/">Forside</a>
-              <a style={link} href="/admin">Admin Panel</a>
-              <a style={link} href="/stores">Mine Webshops</a>
-              <a style={link} href="/create-store">Opret Webshop</a>
-              <a style={link} href="/dashboard">Dashboard</a>
+        <p style={{ fontSize: "22px", maxWidth: "720px", marginTop: "24px", color: "#d1d5db" }}>
+          En dansk Shopify-lignende platform med webshop builder, produkter,
+          ordrer, checkout, marketing, AI-værktøjer og analytics.
+        </p>
 
-              <a style={link} href="/builder">Builder</a>
-              <a style={link} href="/theme-editor">Theme Editor</a>
-              <a style={link} href="/customizer">Customizer</a>
-              <a style={link} href="/templates">Templates</a>
-              <a style={link} href="/store">Webshop Preview</a>
+        <div style={{ display: "flex", gap: "14px", marginTop: "34px" }}>
+          <a href="/create-store" style={primary}>
+            Start gratis
+          </a>
 
-              <a style={link} href="/products">Produkter</a>
-              <a style={link} href="/collections">Collections</a>
-              <a style={link} href="/inventory">Lagerstyring</a>
-              <a style={link} href="/orders">Ordrer</a>
-              <a style={link} href="/customers">Kunder</a>
-
-              <a style={link} href="/discounts">Rabatkoder</a>
-              <a style={link} href="/gift-cards">Gavekort</a>
-              <a style={link} href="/loyalty">Kundeklub</a>
-              <a style={link} href="/abandoned-carts">Forladte kurve</a>
-              <a style={link} href="/reviews">Reviews</a>
-
-              <a style={link} href="/analytics">Analytics</a>
-              <a style={link} href="/reports">Rapporter</a>
-              <a style={link} href="/marketing">Marketing</a>
-              <a style={link} href="/apps">Apps</a>
-              <a style={link} href="/marketplace">Marketplace</a>
-
-              <a style={link} href="/checkout">Checkout</a>
-              <a style={link} href="/shipping">Fragt</a>
-              <a style={link} href="/taxes">Moms</a>
-              <a style={link} href="/domains">Domæner</a>
-              <a style={link} href="/invoices">Fakturaer</a>
-
-              <a style={link} href="/plans">Abonnementer</a>
-              <a style={link} href="/subscriptions">Produkt-abonnementer</a>
-              <a style={link} href="/affiliate">Affiliate</a>
-              <a style={link} href="/pos">POS</a>
-
-              <a style={link} href="/ai-builder">AI Store Builder</a>
-              <a style={link} href="/ai-product-generator">AI Product Generator</a>
-              <a style={link} href="/ai-ads-generator">AI Ads Generator</a>
-              <a style={link} href="/ai-creative-generator">AI Creative Generator</a>
-              <a style={link} href="/ai-seo-generator">AI SEO Generator</a>
-              <a style={link} href="/ai-email-generator">AI Email Generator</a>
-              <a style={link} href="/ai-support-bot">AI Support Bot</a>
-              <a style={link} href="/ai-store-manager">AI Store Manager</a>
-              <a style={link} href="/ai-competitor-spy">AI Competitor Spy</a>
-              <a style={link} href="/ai-pricing-optimizer">AI Pricing Optimizer</a>
-
-              <a style={link} href="/pages">Sider</a>
-              <a style={link} href="/navigation">Navigation</a>
-              <a style={link} href="/notifications">Notifikationer</a>
-              <a style={link} href="/support">Support</a>
-              <a style={link} href="/team">Team & Roller</a>
-              <a style={link} href="/account">Min konto</a>
-              <a style={link} href="/settings">Indstillinger</a>
-            </nav>
-          </aside>
-
-          <main style={{ marginLeft: "280px", width: "100%" }}>
-            {children}
-          </main>
+          <a href="/dashboard" style={secondary}>
+            Se dashboard
+          </a>
         </div>
-      </body>
-    </html>
+      </section>
+
+      <section style={{ padding: "60px" }}>
+        <h2 style={{ fontSize: "38px" }}>
+          Alt du skal bruge til at drive webshop
+        </h2>
+
+        <div style={grid}>
+          <div style={card}>
+            <h3>Webshop Builder</h3>
+            <p>Byg webshop uden kode med templates og customizer.</p>
+          </div>
+
+          <div style={card}>
+            <h3>Produkter & Ordrer</h3>
+            <p>Administrér produkter, kunder, lager, rabatter og ordrer.</p>
+          </div>
+
+          <div style={card}>
+            <h3>AI Værktøjer</h3>
+            <p>Generér produkter, annoncer, SEO, emails og creatives med AI.</p>
+          </div>
+
+          <div style={card}>
+            <h3>Checkout & Betaling</h3>
+            <p>Forbind Stripe, MobilePay, fragt, moms og domæner.</p>
+          </div>
+
+          <div style={card}>
+            <h3>Analytics</h3>
+            <p>Følg salg, konvertering, trafik og rapporter.</p>
+          </div>
+
+          <div style={card}>
+            <h3>Marketplace</h3>
+            <p>Installer apps, themes og integrationer.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
-const link = {
-  color: "white",
+const primary = {
+  background: "white",
+  color: "#111827",
+  padding: "14px 22px",
+  borderRadius: "12px",
   textDecoration: "none",
-  padding: "10px 12px",
-  borderRadius: "10px",
-  background: "rgba(255,255,255,0.06)"
+  fontWeight: "bold"
+};
+
+const secondary = {
+  background: "transparent",
+  color: "white",
+  border: "1px solid white",
+  padding: "14px 22px",
+  borderRadius: "12px",
+  textDecoration: "none"
+};
+
+const grid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))",
+  gap: "20px",
+  marginTop: "30px"
+};
+
+const card = {
+  background: "white",
+  border: "1px solid #ddd",
+  borderRadius: "16px",
+  padding: "24px"
 };
